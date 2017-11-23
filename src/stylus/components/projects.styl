@@ -1,15 +1,19 @@
 .projects {
     background: #fff;
-    overflow: hidden;
-    height: 100vh;
     color: #4F4640;
-    display: flex;
-    align-items: center;
 
     .holder {
         padding: 0 20px;
         box-sizing: border-box;
         width: 100%;
+    }
+
+    .next {
+        svg {
+            path {
+                fill: #4F4640;
+            }
+        }
     }
 
     .projects-holder {
@@ -19,15 +23,15 @@
     }
 
     .project {
-        padding: 20px;
-        color: #fff;
         flex-shrink: 0;
         width: 80%;
         box-sizing: border-box;
         margin-left: 20px;
 
         &.netshoes {
+           .logo {
            background-color: #5e2a7d;
+           }
 
            svg {
                height: 150px;
@@ -35,7 +39,9 @@
         }
 
         &.honda {
+           .logo {
            background-color: #dd292c;
+           }
 
            svg {
                height: 150px;
@@ -43,7 +49,9 @@
         }
 
         &.pep {
+            .logo {
             background-color: #972590;
+            }
 
             svg {
                height: 50px;
@@ -69,7 +77,24 @@
         }
 
         .link {
-            color: #fff;
+            color: #4F4640;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .projects {
+        .projects-holder {
+            display: flex;
+            margin: 0;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .project {
+            width: 48%;
+            margin-left: 0;
+            margin-bottom: 4%;
         }
     }
 }
