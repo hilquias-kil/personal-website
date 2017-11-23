@@ -1,0 +1,47 @@
+{
+  "name": "setup-boilerplate",
+  "version": "1.0.0",
+  "description": "simple boilerplate for small projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run css-watch & npm run js-watch & npm run html-watch & npm run server",
+    "postinstall": "mkdir dist && mkdir dist/css",
+    "js": "rollup -c",
+    "js-watch": "rollup -c -w",
+    "js-lint": "eslint src/js/**/*.js",
+    "css": "stylus src/stylus --out dist/css",
+    "css-watch": "stylus src/stylus --out dist/css -w",
+    "css-lint": "stylint src/stylus/**/*.styl",
+    "server": "browser-sync start --server dist/ --files \"dist/css/*.css, dist/js/*.js, dist/*.html\" reload --port 8000",
+    "html": "npm run clean && nunjucks **/*.html -p src/html -o dist -u",
+    "html-watch": "npm run clean && nunjucks **/*.html -p src/html -o dist -u -w",
+    "clean": "rimraf dist/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hilquias-kil/setup-boilerplate.git"
+  },
+  "author": "Hilquias Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hilquias-kil/setup-boilerplate/issues"
+  },
+  "homepage": "https://github.com/hilquias-kil/setup-boilerplate#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "eslint": "^4.11.0",
+    "kouto-swiss": "^1.1.0",
+    "mkdir": "0.0.2",
+    "nunjucks-cli": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.51.5",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "stylint": "^1.5.9",
+    "stylus": "^0.54.5"
+  }
+}
