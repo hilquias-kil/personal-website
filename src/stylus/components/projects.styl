@@ -1,0 +1,75 @@
+.projects {
+    background: #fff;
+    overflow: hidden;
+    height: 100vh;
+    color: #4F4640;
+    display: flex;
+    align-items: center;
+
+    .holder {
+        padding: 0 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .projects-holder {
+        display: flex;
+        margin: 0 -20px;
+        overflow: auto;
+    }
+
+    .project {
+        padding: 20px;
+        color: #fff;
+        flex-shrink: 0;
+        width: 80%;
+        box-sizing: border-box;
+        margin-left: 20px;
+
+        &.netshoes {
+           background-color: #5e2a7d;
+
+           svg {
+               height: 150px;
+           }
+        }
+
+        &.honda {
+           background-color: #dd292c;
+
+           svg {
+               height: 150px;
+           }
+        }
+
+        &.pep {
+            background-color: #972590;
+
+            svg {
+               height: 50px;
+           }
+        }
+
+        .logo {
+            height: 100px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+
+            svg {
+                position: absolute;
+                left 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+
+        .link {
+            color: #fff;
+        }
+    }
+}
