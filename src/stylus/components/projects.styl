@@ -20,6 +20,11 @@
         display: flex;
         margin: 0 -20px;
         overflow: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+            background: transparent;
+        }
     }
 
     .project {
@@ -27,6 +32,7 @@
         width: 80%;
         box-sizing: border-box;
         margin-left: 20px;
+        padding-bottom: 20px;
 
         &.netshoes {
            .logo {
@@ -100,6 +106,7 @@
             width: 48%;
             margin-left: 0;
             margin-bottom: 4%;
+            padding-bottom: 0;
         }
     }
 }
